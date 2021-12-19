@@ -1,0 +1,66 @@
+<div class="dashContainer">
+  <div class="emptySide"><%- include('../partials/header.ejs') %></div>
+  <div class="mainSide">
+    <h2>Class</h2>
+
+    <div id="searchClass2" name="searchClass2" class="searchClass2">
+      <form action="/dashboard/searchClass2" method="POST">
+        <h3>SEARCH IF Class EXIST</h3>
+        <label for="ClassIDSrch2">Class ID:</label><br />
+        <textarea
+          name="ClassIDSrch2"
+          id=""
+          cols="30"
+          rows="30"
+          placeholder="12345678, 87654321"
+        ></textarea>
+        <br /><br />
+
+        <button type="submit" id="srchXmnee-btn" class="srchXmnee-btn">
+          SEARCH
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+
+    <div id="setGradACKstud" name="setGradACKstud" class="setGradACKstud">
+      <form action="/dashboard/setGradACKstud" method="POST">
+        <h3>SET GRADUATED ACK STUDENTS ORGANIZATION AS "ACK Grad"</h3>
+        <label for="setGradACK">Class ID:</label><br />
+        <textarea
+          name="setGradACK"
+          id=""
+          cols="30"
+          rows="30"
+          placeholder="12345678, 87654321"
+        ></textarea>
+        <br /><br />
+
+        <button type="submit" id="srchXmnee-btn" class="srchXmnee-btn">
+          SET
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

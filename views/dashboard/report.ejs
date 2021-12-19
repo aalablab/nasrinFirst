@@ -1,0 +1,206 @@
+<div class="dashContainer">
+  <div class="emptySide"><%- include('../partials/header.ejs') %></div>
+  <div class="mainSide">
+    <h2>Report</h2>
+    <button onclick="showSrchExamScr()" id="showSrchExam" name="showSrchExam">
+      Exam Report
+    </button>
+    <button
+      onclick="showExportExamScr()"
+      id="showExportExam"
+      name="showExportExam"
+    >
+      Export Report
+    </button>
+    <button
+      onclick="showSrchXmneeScr()"
+      id="showSrchXmnee"
+      name="showSrchXmnee"
+    >
+      Examinee Report
+    </button>
+    <button
+      onclick="showQAnalysisScr()"
+      id="showQAnalysis"
+      name="showQAnalysis"
+    >
+      Question Analysis
+    </button>
+    <button onclick="showFeedbackScr()" id="showFeedback" name="showFeedback">
+      Instructor Feedback
+    </button>
+
+    <br /><br />
+
+    <div id="searchExam" name="searchExam" class="searchExam">
+      <form action="/dashboard/searchExam" method="POST">
+        <h3>SEARCH</h3>
+        <label for="ExamSrch">Schedule Name:</label><br />
+        <input
+          type="text"
+          id="ExamSrch"
+          name="ExamSrch"
+          placeholder="chk M05B1P01 sched"
+        />
+        <br /><br />
+
+        <button type="submit" id="srchExam-btn" class="srchExam-btn">
+          SEARCH
+        </button>
+
+        <button
+          type="submit"
+          id="update-btn"
+          class="update-btn"
+          formaction="/dashboard/updateExamResults"
+          formmethod="POST"
+        >
+          UPDATE RESULTS
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+    <div id="exportResults" name="exportResults" class="exportResults">
+      <form action="/dashboard/exportResults" method="POST">
+        <h3>EXPORT</h3>
+        <label for="xportExamSrch">Schedule Name:</label><br />
+        <input
+          type="text"
+          id="xportExamSrch"
+          name="xportExamSrch"
+          placeholder="chk M05B1P01 sched"
+        />
+        <br /><br />
+
+        <button type="submit" id="xportExam-btn" class="xportExam-btn">
+          SEARCH
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+    <div id="SrchXmnee" name="SrchXmnee" class="SrchXmnee">
+      <form action="/dashboard/XmneeAnalysis" method="POST">
+        <h3>Examinee Paper</h3>
+        <label for="XmneeSrch">Examinee ID:</label><br />
+        <input
+          type="text"
+          id="XmneeSrch"
+          name="XmneeSrch"
+          placeholder="1234567890"
+        />
+        <br /><br />
+        <label for="XmneeSrchModule">Module:</label><br />
+        <input
+          type="text"
+          id="XmneeSrchModule"
+          name="XmneeSrchModule"
+          placeholder="M01"
+        />
+        <br /><br />
+        <label for="XmneeSrchStart">Date From:</label><br />
+        <input
+          type="datetime-local"
+          id="XmneeSrchStart"
+          name="XmneeSrchStart"
+        /><br /><br />
+        <label for="XmneeSrchEnd">Date To:</label><br />
+        <input
+          type="datetime-local"
+          id="XmneeSrchEnd"
+          name="XmneeSrchEnd"
+        /><br /><br />
+
+        <button type="submit" id="SrchXmnee-btn" class="SrchXmnee-btn">
+          SEARCH
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+    <div id="QAnalysis" name="QAnalysis" class="QAnalysis">
+      <form action="/dashboard/QAnalysis" method="POST">
+        <h3>QUESTION ANALYSIS</h3>
+        <label for="QAnalysisSrch">Schedule Name:</label><br />
+        <input
+          type="text"
+          id="QAnalysisSrch"
+          name="QAnalysisSrch"
+          placeholder="chk M05B1P01 sched"
+        />
+        <br /><br />
+
+        <button type="submit" id="QAnalysisSrch-btn" class="QAnalysisSrch-btn">
+          SEARCH
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+    <div id="iFeedback" name="iFeedback" class="iFeedback">
+      <form action="/dashboard/iFeedback" method="POST">
+        <h3>INSTRUCTOR FEEDBACK</h3>
+        <label for="FeedbackSrch">Schedule Name:</label><br />
+        <input
+          type="text"
+          id="FeedbackSrch"
+          name="FeedbackSrch"
+          placeholder="chk M05B1P01 sched"
+        />
+        <br /><br />
+
+        <button type="submit" id="FeedbackSrch-btn" class="FeedbackSrch-btn">
+          SEARCH
+        </button>
+
+        <button type="reset">RESET</button>
+        <button
+          type="submit"
+          id="logout-btn"
+          class="logout-btn"
+          formaction="/dashboard/logout"
+          formmethod="GET"
+        >
+          LOG OUT
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

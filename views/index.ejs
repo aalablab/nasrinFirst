@@ -1,0 +1,28 @@
+<div class="loginContainer">
+  <div class="emptySide"></div>
+  <div class="mainSide">
+    <div class="loginNotification" style="color: rgb(0, 0, 0)">
+      <% if (loginOK == false) { %> <%= errors %> <% } %>
+    </div>
+    <form action="/" method="POST">
+      <label for="instructorID" >Instructor ID:</label><br />
+      <input
+        class="loginField"
+        type="text"
+        id="instructorID"
+        name="instructorID"
+        required
+      /><br /><br />
+      <label for="pword">Password:</label><br />
+      <input
+        class="loginField"
+        type="password"
+        id="pword"
+        name="pword"
+        required
+      /><br /><br />
+      <input type="submit" class="loginbtn" value="Sign in" />
+      <input type="reset" class="loginbtn" />
+    </form>
+  </div>
+</div>
